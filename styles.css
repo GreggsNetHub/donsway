@@ -37,7 +37,7 @@ body {
  /* HERO SECTION */
 .hero {
   height: 90vh;
-  background: url('Assets/images/pic4.jpg') center/cover no-repeat;
+  background: url('pic4.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,7 +155,7 @@ body {
   
   .shop-section {
     position: relative;
-    background: url('assets/images/pic5.jpg') no-repeat center/cover;
+    background: url('pic5.jpg') no-repeat center/cover;
     padding: 100px 20px;
     color: #fff;
   }
@@ -230,7 +230,7 @@ body {
   
   /* PARALLAX BOOKING */
   .parallax {
-    background: url('Assets/images/pic4.jpg') center/cover fixed;
+    background: url('pic4.jpg') center/cover fixed;
     padding: 100px 20px;
     text-align: center;
   }
