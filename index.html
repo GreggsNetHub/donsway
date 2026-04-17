@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Don's Way Ent.</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h1 class="logo">Don's Way Ent.🎶</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#events">Events</a>
+    <a href="#tickets">Tickets</a>
+    <a href="#booking">Booking</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO WITH FULL IMAGE BACKGROUND -->
+<section id="home" class="hero">
+  <div class="overlay">
+    <h1>Luxury Sound. Elite Production.</h1>
+    <p>Where Music Meets Perfection.<br>Custom beats, clean recordings, and polished mixes that make your sound stand out.</p>
+    <button onclick="scrollToBooking()"><h3>Book a Session</h3></button>
+  </div>
+</section>
+
+<!-- LEFT IMAGE / RIGHT TEXT -->
+<section class="split-section">
+  <div class="image" style="background-image: url('Assets/images/image1.jpg');"></div>
+  <div class="text">
+    <h1>About Don's Way Production</h1>
+   <p>Don's Way Production is a professional music production studio built for artists, creators, and brands who want release-ready sound. From crafting custom beats that match your vision to providing focused vocal recording support, we help you capture performances with clarity and energy. Every session is backed by detailed editing, precise mixing, and final mastering that translates across headphones, cars, clubs, and streaming platforms. Whether you’re launching a new single, building an EP, or creating branded audio, we deliver high-quality production that elevates your identity and keeps listeners locked in.</p>
+  </div>
+</section>
+
+<!-- RIGHT IMAGE / LEFT TEXT -->
+<section class="split-section reverse">
+  <div class="image" style="background-image: url('Assets/images/image2.jpg');"></div>
+  <div class="text">
+    <h1>Beat Production</h1>
+    <p>Custom beats crafted to match your artistic identity. <br>We craft instrumental tracks from scratch, tailored specifically to an artist's unique style, vocal range, and creative vision, rather than purchasing pre-made beats from a catalog. This process focuses on building a "sonic signature" that reflects an artist's identity, providing a professional and exclusive foundation for recording, typically offering full ownership rights. Beats are designed around the artist's specific flow, preferred tempo, mood, and genre (e.g., trap, R&B, Afrobeat) to enhance their message.</p>
+  </div>
+</section>
+
+<!-- LEFT IMAGE / RIGHT TEXT -->
+<section class="split-section">
+  <div class="image" style="background-image: url('Assets/images/pic5.webp');"></div>
+  <div class="text">
+    <h1>Mixing & Mastering</h1>
+    <p>Polished sound ready for global distribution. mixing (balancing individual tracks) and mastering (finalizing the stereo mix for playback systems). Professional results ensure the track is consistent across all streaming platforms and devices.<br>Mixing focuses on taking individual recorded tracks—vocals, instruments, and drums—and blending them into a cohesive stereo file. </p>
+  </div>
+</section>
+<section class="tickets">
+  <h1>Upcoming Events 🎤</h1>
+
+  <div class="ticket-card">
+    <h2>Live in Nairobi</h2>
+    <p>Date: March 30, 2026</p>
+    <p>Price: KES 2,000</p>
+    <button>Buy Ticket</button>
+  </div>
+
+  <div class="ticket-card">
+    <h2>Meru Concert Night</h2>
+    <p>Date: April 10, 2026</p>
+    <p>Price: KES 1,500</p>
+    <button>Buy Ticket</button>
+  </div>
+
+  <div class="ticket-card">
+    <h2>VIP Experience</h2>
+    <p>Date: April 15, 2026</p>
+    <p>Price: KES 5,000</p>
+    <button>Buy Ticket</button>
+  </div>
+</section>
+<section class="shop-section">
+  <div class="shop-overlay"></div>
+
+  <div class="shop-container">
+    <h1>Our Shop</h1>
+    <p class="shop-subtitle"><h2>Premium Apparel • Signature Style • Don’s Way Lifestyle.</h2></p>
+
+    <div class="products-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="Assets/merch/IMG-20260324-WA0016.jpg" alt="Cap">
+        <h3>Signature Cap</h3>
+        <p>KES 1,500</p>
+        <button onclick="addToCart('Signature Cap',1500)">Add to Cart</button>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="Assets/merch/IMG-20260324-WA0019.jpg" alt="Hoodie">
+        <h3>Luxury Hoodie</h3>
+        <p>KES 3,500</p>
+        <button onclick="addToCart('Luxury Hoodie',3500)">Add to Cart</button>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="Assets/merch/IMG-20260324-WA0011.jpg" alt="Marvin">
+        <h3>Classic Marvin</h3>
+        <p>KES 800</p>
+        <button onclick="addToCart('Classic Marvin',800)">Add to Cart</button>
+      </div>
+
+    </div>
+
+    <!-- Cart -->
+    <div class="cart-box">
+      <h2>Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: KES <span id="cart-total">0</span></p>
+      <button class="checkout-btn" onclick="checkout()">Checkout (M-Pesa)</button>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING SECTION WITH BACKGROUND IMAGE -->
+<section id="booking" class="parallax">
+  <div class="overlay">
+    <h1>Book Your Session</h1>
+    <form id="mpesaForm">
+      <input type="text" id="phone" placeholder="2547XXXXXXXX" required>
+      <input type="number" id="amount" placeholder="Amount (KES)" required>
+      <button type="submit">Pay via M-Pesa</button>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="split-section reverse">
+  <div class="image" style="background-image: url('Assets/merch/IMG-20260324-WA0006.jpg');"></div>
+  <div class="text">
+    <h1>Contact Us</h1>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <textarea id="message" placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>©2026 Don's Way Entertainment🎶<br><italics>Designed & Maintained by GreggsTecHub Consulting Co.</italics></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
